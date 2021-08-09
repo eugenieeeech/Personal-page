@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { RoutedComponentProps } from "../../routes";
 import {
+  Box,
   Button,
-  Container,
-  CssBaseline,
+  Card,
   Grid,
   Link,
   TextField,
@@ -16,19 +16,24 @@ import {
 
 // import backendApi from "../../backendApi";
 const Contact: React.FC<RoutedComponentProps> = (props) => {
+  var cardStyle = {
+    display: 'block',
+    width: '100vw',
+    height: 'auto'
+}
   console.log("find me?");
   useEffect(() => {
     (async () => {})().then();
   }, []);
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get("email"),
-      password: data.get("message"),
-    });
-  };
+  // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   // eslint-disable-next-line no-console
+  //   console.log({
+  //     email: data.get("email"),
+  //     message: data.get("message"),
+  //   });
+  // };
   return (
     <PageTemplate
       appBarTitle={props.routeDetail.title}
@@ -37,14 +42,19 @@ const Contact: React.FC<RoutedComponentProps> = (props) => {
       <Grid container justifyContent="center"
           alignItems="center" item spacing={2}
           direction="row">
-        <Grid item >
-      
-          <Grid><Typography variant="h5" component="h5"><EmailIcon/>Contact</Typography></Grid>
-          <Grid xs={12}>Email:</Grid>
-          <a href="mailto:{{eugenie.630.cheng@gmail.com}}"> Email</a>
-          <Grid xs={12}>Linkedin:</Grid>
-          <Link href="https://www.linkedin.com/in/eugenie-cheng-eugenieeeech/">Eugenie Cheng</Link>
-          
+        <Grid item container>
+          <Box width={1} display="flex" justifyContent="center" 
+          m={2}
+          >
+        <Card style={cardStyle}>
+          <Box p={1} ><Typography variant="h5" component="h5"><EmailIcon/>Contact</Typography></Box>
+          <Box p={1} >Email:</Box>
+          <Box p={1}><a href="mailto:{{eugenie.630.cheng@gmail.com}}"> Click here</a></Box>
+          <Box p={1}>Linkedin:</Box>
+          <Box p={1}><Link href="https://www.linkedin.com/in/eugenie-cheng-eugenieeeech/">Eugenie Cheng</Link></Box>
+        </Card>
+        </Box>
+
           <Grid><Typography variant="h5" component="h5">Leave Your Message</Typography></Grid>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>

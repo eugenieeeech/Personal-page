@@ -25,12 +25,17 @@ interface DrawerItem {
 
 
 
+
+
+
+
 export enum RouteId {
   Index,
   About,
   Dashboard,
   Contact,
-  Home
+  Home,
+  Projects
 }
 
 export interface RoutedComponentProps {
@@ -86,12 +91,12 @@ const routes: RouteDetail[] = [
 },
   // Dashboard
   {
-    id: RouteId.Dashboard,
-    path: "/dashboard", 
-    title: "Dashboard",
+    id: RouteId.Projects,
+    path: "/project", 
+    title: "Projects",
     component: Dashboard,
     drawerItem: {
-      title: "Dashboard",
+      title: "Projects",
       icon: DashboardIcon
     }
   },
