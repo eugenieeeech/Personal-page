@@ -2,7 +2,48 @@ import React, { useEffect } from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { RoutedComponentProps } from "../../routes";
 import { Grid, Paper } from "@material-ui/core";
+import { DataGrid, GridColDef, GridValueGetterParams } from '@material-ui/data-grid';
 // import backendApi from "../../backendApi";
+
+const columns: GridColDef[] = [
+  {
+    field: 'subject',
+    headerName: 'Subject',
+    width: 250,
+  }, 
+  {
+    field: 'code',
+    headerName: 'Couse number',
+    width: 250,
+  },
+  {
+    field: 'name',
+    headerName: 'Couse name',
+    width: 250,
+  },
+  
+];
+
+const rows = [
+  { id: 1, subject: 'AIST',code: '2010',name: 'Intro to Computer Music',  },
+
+  { id: 2, subject: 'CSCI', code:'1130',name: 'Intro to Computing Using Java' },
+  { id: 3, subject: 'CSCI', code:'2100',name: 'Intro to Data Structures' },
+  { id: 4, subject: 'CSCI', code:'3100',name: 'Software Engineering' },
+  { id: 5, subject: 'CSCI', code:'3150',name: 'Intro to Operating Systems' },
+  { id: 6, subject: 'CSCI', code:'3160',name: 'Design & Analysis of Algo' },
+  { id: 7, subject: 'CSCI', code:'3230',name: 'Fundamentals of AI' },
+  { id: 8, subject: 'CSCI', code:'3250',name: 'Computers and Society' },
+  { id: 9, subject: 'CSCI', code:'3251',name: 'Engineering Practicum' },
+  { id: 10, subject: 'CSCI', code:'3260',name: 'Principles of Comp Graphics' },
+  { id: 11, subject: 'CSCI', code:'4120',name: 'Principles of Comp Game SW' },
+
+  { id: 12, subject: 'JASP', code:'1450',name: 'New Practical Japanese I' },
+  { id: 13, subject: 'JASP', code:'1460',name: 'New Practical Japanese II' },
+  { id: 14, subject: 'JASP', code:'2450',name: 'New Practical Japanese III' },
+  { id: 15, subject: 'JASP', code:'2460',name: 'New Practical Japanese IV' },
+
+];
 
 const About: React.FC<RoutedComponentProps> = (props) => {
   console.log("hello world");
@@ -54,16 +95,15 @@ const About: React.FC<RoutedComponentProps> = (props) => {
             </Paper>
           </Grid>
           <Paper elevation={6}>
-            Course taken in CUHK: AIST2010-Intro to Computer Music
-            CSCI1130-Intro to Computing Using Java CSCI2100-Data Structures
-            CSCI3100-Software Engineering CSCI3150-Intro to Operating Systems
-            CSCI3160-Design & Analysis of Algo CSCI3230-Fundamentals of AI
-            CSCI3250-Computers and Society CSCI3251-Engineering Practicum
-            CSCI3260-Principles of Comp Graphics CSCI4120-Principles of Comp
-            Game SW Minor(JAPANESE): JASP1450-New Practical Japanese I
-            JASP1460-New Practical Japanese II JASP2450-New Practical Japanese
-            III JASP2460-New Practical Japanese IV
+            Course taken in CUHK:
           </Paper>
+          <div style={{ height: 400, width: '100%' }}>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        pageSize={5}
+      />
+    </div>
         </Grid>
       </Grid>
     </PageTemplate>
