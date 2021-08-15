@@ -68,7 +68,8 @@ const About: React.FC<RoutedComponentProps> = (props) => {
             <Paper elevation={6}>
               I am Eugenie Cheng. I am a final year university student who is
               pursuing a Bachelor of Computer Science at The Chinese university
-              of Hong Kong (CUHK). As a computer science major student, I have
+              of Hong Kong (CUHK).<br/> 
+              As a computer science major student, I have
               learnt different programming skills and knowledge from various
               courses and projects. For instance, throughout the Software
               Engineering Course, I have learnt the basic knowledge about
@@ -80,8 +81,8 @@ const About: React.FC<RoutedComponentProps> = (props) => {
               learn new technologies such as Artificial Intelligence and new
               API. I have taken related courses and workshops to stay up to date
               on industry trends and seek for advancements. This allowed me to
-              step outside my comfort zone and keep exploring new knowledge. In
-              addition to my programming experience, my previous two summer
+              step outside my comfort zone and keep exploring new knowledge.<br/> 
+              In addition to my programming experience, my previous two summer
               internships position is software engineer. I mainly worked as a
               developer, expericened in both front-end and back-end. For the
               first internship, I was building UI in the application,
