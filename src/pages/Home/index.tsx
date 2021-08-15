@@ -22,11 +22,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   title: {
-    color: '#fff',
+    //color: '#fff',
     fontSize: '4.5rem',
   },
   goDown: {
-    color: '#5AFF3D',
+    //color: '#5AFF3D',
     fontSize: '4rem',
   },
 }));
@@ -55,7 +55,7 @@ const Home: React.FC<RoutedComponentProps> = (props) => {
         <div className={classes.container}>
           <h1 className={classes.title}>
             Welcome to <br />
-            My<span className={classes.colorText}>Page.</span>
+            My<span>Page.</span>
           </h1>
           <Link to={'/about'}>
               <IconButton>

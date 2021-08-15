@@ -49,7 +49,7 @@ const Contact: React.FC<RoutedComponentProps> = (props) => {
         <Card style={cardStyle}>
           <Box p={1} ><Typography variant="h5" component="h5"><EmailIcon/>Contact</Typography></Box>
           <Box p={1} >Email:</Box>
-          <Box p={1}><a href="mailto:{{eugenie.630.cheng@gmail.com}}"> Click here</a></Box>
+          <Box p={1}><a href="mailto: eugenie.630.cheng@gmail.com"> Click here</a></Box>
           <Box p={1}>Linkedin:</Box>
           <Box p={1}><Link href="https://www.linkedin.com/in/eugenie-cheng-eugenieeeech/">Eugenie Cheng</Link></Box>
         </Card>
