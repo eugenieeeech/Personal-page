@@ -49,7 +49,7 @@ const Dashboard: React.FC<RoutedComponentProps> = (props) => {
 
   var MGMProject = (
     <Grid item xs={6}>
-      <Card>
+      <Card style={{height:"100%"}}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             Member-Get-Member(MGM) project
