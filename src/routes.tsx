@@ -62,14 +62,14 @@ const routes: RouteDetail[] = [
   // Index 
   {
     id: RouteId.Index,
-    path: "/",
-    redirectTo: "/home",
+    path: "/Personal-page",
+    redirectTo: "/Personal-page/home",
     component: Home 
   },
   //home
 {
   id: RouteId.Home,
-  path: "/home", 
+  path: "/Personal-page/home", 
   title: "Home",
   component: Home,
   drawerItem: {
@@ -81,7 +81,7 @@ const routes: RouteDetail[] = [
   
 {
   id: RouteId.About,
-  path: "/about", 
+  path: "/Personal-page/about", 
   title: "About",
   component: About,
   drawerItem: {
@@ -92,7 +92,7 @@ const routes: RouteDetail[] = [
   // Dashboard
   {
     id: RouteId.Projects,
-    path: "/project", 
+    path: "/Personal-page/project", 
     title: "Projects",
     component: Dashboard,
     drawerItem: {
