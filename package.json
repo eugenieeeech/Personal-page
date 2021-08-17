@@ -21,7 +21,6 @@
     "react-mailto": "^0.4.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "react-scroll": "^1.8.3",
     "typescript": "^4.3.5",
     "use-query-params": "^1.2.3",
     "web-vitals": "^1.1.2"
