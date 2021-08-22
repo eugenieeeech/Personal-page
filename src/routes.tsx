@@ -23,12 +23,6 @@ interface DrawerItem {
 }
 
 
-
-
-
-
-
-
 export enum RouteId {
   Index,
   About,
@@ -62,14 +56,14 @@ const routes: RouteDetail[] = [
   // Index 
   {
     id: RouteId.Index,
-    path: "/Personal-page",
+    path: "/",
     redirectTo: "/Personal-page/home",
     component: Home 
   },
   //home
 {
   id: RouteId.Home,
-  path: "/Personal-page/home", 
+  path: "/home", 
   title: "Home",
   component: Home,
   drawerItem: {
@@ -81,7 +75,7 @@ const routes: RouteDetail[] = [
   
 {
   id: RouteId.About,
-  path: "/Personal-page/about", 
+  path: "/about", 
   title: "About",
   component: About,
   drawerItem: {
@@ -92,7 +86,7 @@ const routes: RouteDetail[] = [
   // Dashboard
   {
     id: RouteId.Projects,
-    path: "/Personal-page/project", 
+    path: "/project", 
     title: "Projects",
     component: Dashboard,
     drawerItem: {
