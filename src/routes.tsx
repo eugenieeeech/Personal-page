@@ -8,8 +8,6 @@ import Home from "./pages/Home";
 
 import {
   Dashboard as DashboardIcon,
-  Timeline as TimelineIcon,
-  Assessment as AssessmentIcon,
   Person as PersonIcon,
   Email as EmailIcon,
   Home as HomeIcon

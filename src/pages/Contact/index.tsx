@@ -34,16 +34,63 @@ const Contact: React.FC<RoutedComponentProps> = (props) => {
   //     message: data.get("message"),
   //   });
   // };
-  return (
-    <PageTemplate
-      appBarTitle={props.routeDetail.title}
-      selectedId={props.routeDetail.id}
-    >
-      <Grid container justifyContent="center"
-          alignItems="center" item spacing={2}
-          direction="row">
-        <Grid item container>
-          <Box width={1} display="flex" justifyContent="center" 
+
+  var contactform=(
+    <form style={{padding : 2 }}>
+      
+    <Typography variant="h5" component="h5">Leave Your Message</Typography>
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={6}>
+      <TextField
+        autoComplete="fname"
+        name="firstName"
+        required
+        fullWidth
+        id="firstName"
+        label="First Name"
+        autoFocus
+      />
+    </Grid>
+    <Grid item xs={12} sm={6}>
+      <TextField
+        required
+        fullWidth
+        id="lastName"
+        label="Last Name"
+        name="lastName"
+        autoComplete="lname"
+      />
+    </Grid>
+    <Grid item xs={12}>
+      <TextField
+        required
+        fullWidth
+        id="email"
+        label="Email Address"
+        name="email"
+        autoComplete="email"
+      />
+    </Grid>
+    <Grid item xs={12}>
+      <TextField
+        id="outlined-textarea"
+        label="Message"
+        placeholder="Enter Your Message"
+        multiline
+        rows={4}
+        variant="outlined"
+        fullWidth
+      />
+    </Grid>
+  <Button type="submit" fullWidth variant="contained">
+    Submit
+  </Button>
+  </Grid>
+  </form>
+  );
+
+  var contactcard=(
+    <Box width={1} display="flex" justifyContent="center" 
           m={2}
           >
         <Card style={cardStyle}>
@@ -54,57 +101,25 @@ const Contact: React.FC<RoutedComponentProps> = (props) => {
           <Box p={1}><Link href="https://www.linkedin.com/in/eugenie-cheng-eugenieeeech/">Eugenie Cheng</Link></Box>
         </Card>
         </Box>
+  );
+  return (
+    <PageTemplate
+      appBarTitle={props.routeDetail.title}
+      selectedId={props.routeDetail.id}
+    >
 
-          <Grid><Typography variant="h5" component="h5">Leave Your Message</Typography></Grid>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                autoComplete="fname"
-                name="firstName"
-                required
-                fullWidth
-                id="firstName"
-                label="First Name"
-                autoFocus
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                required
-                fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
-                autoComplete="lname"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                id="outlined-textarea"
-                label="Message"
-                placeholder="Enter Your Message"
-                multiline
-                rows={4}
-                variant="outlined"
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}></Grid>
-          </Grid>
-          <Button type="submit" fullWidth variant="contained">
-            Submit
-          </Button>
-          <Grid container justifyContent="flex-end"></Grid>
+<Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        direction="row"
+      >
+        <Grid item xs={12} sm={6}>
+          {contactform}
+        </Grid>
+        <Grid item xs={12}  sm={6}>
+          {contactcard}
         </Grid>
       </Grid>
     </PageTemplate>

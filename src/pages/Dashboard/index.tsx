@@ -2,12 +2,10 @@ import React, { useEffect } from "react";
 import PageTemplate from "../../components/PageTemplate";
 import { RoutedComponentProps } from "../../routes";
 import {
-  Box,
   Button,
   Card,
   CardActions,
   CardContent,
-  Container,
   Grid,
   Typography,
 } from "@material-ui/core";

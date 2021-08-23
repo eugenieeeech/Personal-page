@@ -23,8 +23,6 @@ import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, B
 import { useSnackbar, VariantType as SnackbarVariantType } from 'notistack';
 import { 
   Close as CloseIcon,
-  AccountCircle as AccountCircleIcon,
-  ArrowDropDown as ArrowDropDownIcon,
 } from '@material-ui/icons';
 import localStorageService from '../service/localStorageService';
 
@@ -143,8 +141,8 @@ const PageTemplate: React.FC<PageTemplateProps> = (props) => {
 
   const [isInit, setIsInit] = useState(false);
   // const [canUpdateUserRole, setCanUpdateUserRole] = useState(false);
-  const [drawerOpened, setDrawerOpened] = useState(localStorageService.drawerOpened.get());
-  const [userMenuAnchorEl, setUserMenuAnchorEl] = useState(null);
+  const [drawerOpened, setDrawerOpened] = useState(false);
+
 
   const updateDrawerOpened = (flag: boolean) => {
     setDrawerOpened(flag);
@@ -284,51 +282,7 @@ const PageTemplate: React.FC<PageTemplateProps> = (props) => {
         
         <Typography variant="h6" noWrap>
           {props.appBarTitle}
-        </Typography>
-
-        <Button
-          color="inherit"
-          style={{marginLeft: "auto", textTransform: "none"}}
-          size="large"
-          onClick={(e: any) => {
-            setUserMenuAnchorEl(e.currentTarget);
-          }}
-        >
-          <AccountCircleIcon style={{marginRight: "0.5em"}} />
-          <ArrowDropDownIcon style={{marginLeft: "0.1em"}} />
-        </Button>
-
-        <Menu
-          anchorEl={userMenuAnchorEl}
-          getContentAnchorEl={null}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'right',
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          keepMounted
-          open={Boolean(userMenuAnchorEl)}
-          onClose={() => {
-            setUserMenuAnchorEl(null);
-          }}
-        >
-          <MenuItem
-            component={Link}
-            to="/settings"
-          >
-            Settings
-          </MenuItem>
-          
-          <MenuItem
-            component={Link}
-            to="/user/logout"
-          >
-            Logout
-          </MenuItem>
-        </Menu>
+        </Typography>       
 
       </Toolbar>
     </AppBar>
