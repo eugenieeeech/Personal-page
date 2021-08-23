@@ -57,7 +57,7 @@ const routes: RouteDetail[] = [
   {
     id: RouteId.Index,
     path: "/",
-    redirectTo: "/Personal-page/home",
+    redirectTo: "/home",
     component: Home 
   },
   //home
